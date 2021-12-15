@@ -1,6 +1,8 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
+void greetings(string name,int age);
+  double cube(double num);
 int main()
 {
   cout<<"Hello World!"<<endl;
@@ -90,5 +92,59 @@ int main()
   cout<<"Your Fullname is "<<full_user_name<<endl;
   cout<<"Your Nickname is "<<user_nickname<<endl;
   cout<<"You are "<<age<<" years old"<<endl;
+  /*Working with arrays*/
+  int hotel_room_number[4]={601,602,606,607};//[]this means size {} and this are the elements
+  cout<<hotel_room_number[0]<<endl;//it act like just a normal c program
+  cout<<hotel_room_number[1]<<endl;
+  cout<<hotel_room_number[2]<<endl;
+  cout<<hotel_room_number[3]<<endl;
+  cout<<"\n"<<endl;
+  hotel_room_number[2]=603;
+  hotel_room_number[3]=604;
+  cout<<hotel_room_number[0]<<endl;
+  cout<<hotel_room_number[1]<<endl;
+  cout<<hotel_room_number[2]<<endl;
+  cout<<hotel_room_number[3]<<endl;
+  cin>>hotel_room_number[4];
+  cout<<hotel_room_number[4]<<endl;
+  /*Working with the FUNCTION*/
+  cout<<"lol"<<endl;
+  greetings("world!",999);
+  greetings("Mars" , 99);
+  greetings("Moon",9);
+  cout<<"mem"<<endl;
+  cout<<"\n"<<endl;
+  /*Reurn type*/
+  //cube(2);
+  cout<<"Answer: "<<cube(2)<<endl;
+  /*if else if else statment using bool*/
+  bool isboy=false;
+  bool istall=true;
+  if(isboy&&istall)//they are acually semiler to C program
+  {
+    cout<<"You are a tallboy"<<endl;
+  }
+  else if(isboy&&!istall)
+  {
+    cout<<"You are a shortboy"<<endl;
+  }
+  else if(!isboy&&istall)
+  {
+    cout<<"You are a tallgirl"<<endl;
+  }
+  else{
+    cout<<"You are a shortgirl"<<endl;
+  }
+  
   return 0;
 } 
+  void greetings(string name,int age)
+  {
+    cout<<"Hello "<<name<<endl;
+    cout<<name<<" age is "<<age<<endl;
+  }
+  double cube(double num)
+  {
+    double answer=num*num*num;
+    return answer;
+  }
